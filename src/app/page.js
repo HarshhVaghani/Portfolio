@@ -14,7 +14,7 @@ export default function Home() {
 
       <div className="relative z-10 w-full">
         <Navbar />
-        <div className="container mx-auto px-8 md:px-16">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-16 py-0">
           <Hero />
           <About />
           <Skills />

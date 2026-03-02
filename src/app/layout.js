@@ -16,6 +16,13 @@ export const metadata = {
   description: "Portfolio of Harsh Vaghani, a full stack developer specializing in React, Next.js, and 3D web experiences.",
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">

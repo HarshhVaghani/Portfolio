@@ -6,7 +6,7 @@
   "static/chunks/node_modules_three_build_three_module_0c59ee63.js",
   "static/chunks/node_modules_three_build_three_module_f7d46d9b.js",
   "static/chunks/node_modules_@react-three_fiber_dist_d2d2cc79._.js",
-  "static/chunks/node_modules_bbc78eaa._.js"
+  "static/chunks/node_modules_df8bd602._.js"
 ],
     source: "dynamic"
 });

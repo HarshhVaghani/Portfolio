@@ -32,6 +32,10 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   max-width: 100vw;
@@ -39,7 +43,6 @@ body {
   background-color: var(--bg-color);
   color: var(--text-primary);
   font-family: var(--font-inter), sans-serif;
-  scroll-behavior: smooth;
   margin: 0;
   padding: 0;
 }
@@ -92,3 +95,68 @@ a {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+/* Responsive text utilities */
+@media (max-width: 640px) {
+  body {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: clamp(1.75rem, 5vw, 3.5rem);
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+  }
+
+  h3 {
+    font-size: clamp(1.25rem, 3vw, 1.875rem);
+  }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+  }
+
+  h2 {
+    font-size: clamp(1.875rem, 4vw, 3rem);
+  }
+
+  h3 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+  }
+}
+
+/* Touch-friendly button size for mobile */
+@media (max-width: 640px) {
+  button, a[role="button"], input[type="button"], input[type="submit"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Reduced animations on mobile for better performance */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Improve readability on mobile */
+@media (max-width: 640px) {
+  p, li, span {
+    line-height: 1.6;
+  }
+}
+
+/* Container queries support for better responsive design */
+@supports (container-type: inline-size) {
+  .responsive-container {
+    container-type: inline-size;
+  }
+}
+

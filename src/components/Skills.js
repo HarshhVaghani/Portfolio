@@ -56,19 +56,19 @@ export default function Skills() {
     }, []);
 
     return (
-        <section ref={sectionRef} id="skills" className="py-24 min-h-screen flex items-center justify-center">
+        <section ref={sectionRef} id="skills" className="py-12 sm:py-16 md:py-24 min-h-screen flex items-center justify-center px-4 sm:px-0">
             <div className="max-w-4xl mx-auto w-full">
-                <h2 className="skill-item text-5xl font-playfair font-bold text-pale-oak-light mb-16 flex items-center gap-4 justify-end">
+                <h2 className="skill-item text-3xl sm:text-4xl md:text-5xl font-playfair font-bold text-pale-oak-light mb-8 sm:mb-12 md:mb-16 flex items-center gap-4 justify-end flex-row">
                     My Capabilities
-                    <span className="w-12 h-[1px] bg-pale-oak-dark inline-block"></span>
+                    <span className="w-8 sm:w-12 h-[1px] bg-pale-oak-dark inline-block"></span>
                 </h2>
 
-                <div className="grid md:grid-cols-2 gap-x-16 gap-y-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-x-16 md:gap-y-10">
                     {skills.map((skill, index) => (
                         <div key={index} className="skill-item">
-                            <div className="flex justify-between mb-2">
-                                <span className="text-pale-oak text-sm md:text-base font-medium tracking-wide">{skill.name}</span>
-                                <span className="text-pale-oak-dark text-sm">{skill.level}%</span>
+                            <div className="flex justify-between mb-2 gap-2">
+                                <span className="text-pale-oak text-xs sm:text-sm md:text-base font-medium tracking-wide truncate">{skill.name}</span>
+                                <span className="text-pale-oak-dark text-xs sm:text-sm flex-shrink-0">{skill.level}%</span>
                             </div>
                             <div className="w-full h-1 bg-espresso-light rounded overflow-hidden">
                                 <div

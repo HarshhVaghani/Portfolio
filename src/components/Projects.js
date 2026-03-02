@@ -78,43 +78,43 @@ export default function Projects() {
     }, []);
 
     return (
-        <section ref={sectionRef} id="projects" className="py-24 min-h-screen flex items-center justify-center">
+        <section ref={sectionRef} id="projects" className="py-12 sm:py-16 md:py-24 min-h-screen flex items-center justify-center px-4 sm:px-0">
             <div className="max-w-6xl mx-auto w-full">
-                <h2 className="section-title text-5xl font-playfair font-bold text-pale-oak-light mb-16 flex items-center gap-4 opacity-0">
-                    <span className="w-12 h-[1px] bg-pale-oak-dark inline-block"></span>
+                <h2 className="section-title text-3xl sm:text-4xl md:text-5xl font-playfair font-bold text-pale-oak-light mb-8 sm:mb-12 md:mb-16 flex items-center gap-4 opacity-0 flex-col sm:flex-row">
+                    <span className="w-8 sm:w-12 h-[1px] bg-pale-oak-dark inline-block hidden sm:inline-block"></span>
                     Selected Projects
                 </h2>
 
-                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                     {projects.map((project, index) => (
-                        <div key={index} className="project-card opacity-0 glass rounded-xl overflow-hidden flex flex-col group hover:-translate-y-2 transition-all duration-300">
-                            <div className="h-48 bg-espresso-light relative overflow-hidden group-hover:after:absolute group-hover:after:inset-0 group-hover:after:bg-black/20 transition-all duration-300">
+                        <div key={index} className="project-card opacity-0 glass rounded-xl overflow-hidden flex flex-col group hover:-translate-y-2 transition-all duration-300 h-full">
+                            <div className="h-40 sm:h-44 md:h-48 bg-espresso-light relative overflow-hidden group-hover:after:absolute group-hover:after:inset-0 group-hover:after:bg-black/20 transition-all duration-300">
                                 <img src={project.image || '/projects/placeholder.svg'} alt={`${project.title} preview`} className="w-full h-full object-cover group-hover:scale-105 transform transition-all duration-300" />
 
-                                <div className="absolute inset-0 bg-gradient-to-br from-espresso-dark/40 to-transparent p-6 flex items-end">
-                                    <h3 className="text-2xl font-bold text-pale-oak-light font-playfair">{project.title}</h3>
+                                <div className="absolute inset-0 bg-gradient-to-br from-espresso-dark/40 to-transparent p-4 md:p-6 flex items-end">
+                                    <h3 className="text-lg md:text-2xl font-bold text-pale-oak-light font-playfair">{project.title}</h3>
                                 </div>
                             </div>
 
-                            <div className="p-6 flex-1 flex flex-col">
-                                <p className="text-pale-oak text-sm leading-relaxed mb-6 flex-1">
+                            <div className="p-4 md:p-6 flex-1 flex flex-col">
+                                <p className="text-pale-oak text-xs sm:text-sm md:text-sm leading-relaxed mb-4 md:mb-6 flex-1">
                                     {project.description}
                                 </p>
 
-                                <div className="flex flex-wrap gap-2 mb-6">
+                                <div className="flex flex-wrap gap-2 mb-4 md:mb-6">
                                     {project.tech.map((tech, i) => (
-                                        <span key={i} className="px-3 py-1 bg-espresso rounded-full text-xs text-pale-oak-dark font-medium font-inter tracking-wider">
+                                        <span key={i} className="px-2 md:px-3 py-1 bg-espresso rounded-full text-xs text-pale-oak-dark font-medium font-inter tracking-wider">
                                             {tech}
                                         </span>
                                     ))}
                                 </div>
 
-                                <div className="flex justify-between items-center border-t border-espresso pt-4">
-                                    <a href={project.github} className="text-pale-oak hover:text-white transition-colors flex items-center gap-2 text-sm font-medium">
-                                        <Github size={18} /> Code
+                                <div className="flex justify-between items-center border-t border-espresso pt-3 md:pt-4">
+                                    <a href={project.github} className="text-pale-oak hover:text-white transition-colors flex items-center gap-2 text-xs md:text-sm font-medium">
+                                        <Github size={16} className="md:w-[18px] md:h-[18px]" /> Code
                                     </a>
-                                    <a href={project.live} className="text-pale-oak hover:text-white transition-colors flex items-center gap-2 text-sm font-medium">
-                                        <ExternalLink size={18} /> Live Demo
+                                    <a href={project.live} className="text-pale-oak hover:text-white transition-colors flex items-center gap-2 text-xs md:text-sm font-medium">
+                                        <ExternalLink size={16} className="md:w-[18px] md:h-[18px]" /> Live Demo
                                     </a>
                                 </div>
                             </div>
@@ -122,8 +122,8 @@ export default function Projects() {
                     ))}
                 </div>
 
-                <div className="mt-16 text-center">
-                    <a href="https://github.com/HarshhVaghani" target="_blank" rel="noopener noreferrer" className="inline-block px-8 py-4 border border-pale-oak-dark text-pale-oak-light rounded hover:bg-pale-oak hover:text-espresso transition-all duration-300 font-medium tracking-wider uppercase text-sm">
+                <div className="mt-12 md:mt-16 text-center">
+                    <a href="https://github.com/HarshhVaghani" target="_blank" rel="noopener noreferrer" className="inline-block px-6 md:px-8 py-3 md:py-4 border border-pale-oak-dark text-pale-oak-light rounded hover:bg-pale-oak hover:text-espresso transition-all duration-300 font-medium tracking-wider uppercase text-xs md:text-sm">
                         View Archive
                     </a>
                 </div>

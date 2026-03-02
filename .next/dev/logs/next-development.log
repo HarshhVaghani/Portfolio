@@ -1,5 +1,4 @@
-[00:00:01.877] Server  LOG     ✓ Ready in 1197ms
-[00:00:05.350] Browser ERROR   unhandledRejection: ChunkLoadError: Failed to load chunk /_next/static/chunks/%5Bturbopack%5D_browser_dev_hmr-client_hmr-client_ts_c8c997ce._.js from module [turbopack]/browser/dev/hmr-client/hmr-client.ts [app-client] (ecmascript, async loader)
-[00:00:08.377] Server  LOG     ○ Compiling / ...
-[00:00:11.484] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:12.176] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+[00:00:00.914] Server  LOG     ✓ Ready in 570ms
+[00:00:14.946] Server  LOG     ○ Compiling / ...
+[00:00:17.854] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:18.235] Browser WARN    THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
